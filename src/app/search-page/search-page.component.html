@@ -1,0 +1,21 @@
+
+<div class="container">
+    <input type="text" value="Enter track name" [formControl]="trackName">
+    <button  color="primary" (click)="search()">Search</button>
+    <ol> 
+        <li *ngFor="let card of cards$| paginate: { itemsPerPage: 10, currentPage: p } | async">
+            <div class="card">
+              <img src="{{card.image}}">
+              <div class="name">
+                <div>{{card.name}}</div>
+                <div>
+                  <a href="{{card.url}}"> {{card.artist}} >> </a>
+                </div>
+              </div>
+            </div>
+            <hr class="hr">
+          </li>
+    </ol>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+

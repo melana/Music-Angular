@@ -1,0 +1,26 @@
+.footer {
+  background-color: #250f3f;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 5vh;
+}
+
+.footer__row {
+  text-align: center;
+}
+
+.footer__logo {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+}
+
+.footer__text {
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+}

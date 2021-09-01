@@ -1,0 +1,21 @@
+<div class="container">
+
+  <div class="toptext">TOP TRACKS for now</div>
+
+    <ol>
+      <li *ngFor="let card of cards$| paginate: { itemsPerPage: 10, currentPage: p } | async">
+        <div class="card">
+          <img src="{{card.image}}">
+          <div class="name">
+            <div>{{card.name}}</div>
+            <div>
+              <a href="{{card.artist.url}}"> {{card.artist.name}} >> </a>
+            </div>
+          </div>
+        </div>
+        <hr class="hr">
+      </li>
+    </ol>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  
+</div>
